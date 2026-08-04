@@ -2,8 +2,6 @@
 
 You install this once. After that, "build my Claude OS" runs the setup.
 
-> Before you share this: replace `YOUR-GITHUB-USERNAME` below with your real GitHub username (or wherever you host this repo). The install works by pointing Claude at that repository link.
-
 ## In Cowork (Claude desktop app)
 
 Most readers use this path.
@@ -13,7 +11,7 @@ Most readers use this path.
 3. Choose **Personal**, then **Add marketplace from GitHub**.
 4. Paste the repository link:
    ```
-   https://github.com/YOUR-GITHUB-USERNAME/build-your-claude-os
+   https://github.com/sineminflux/build-your-claude-os
    ```
 5. The **Claude OS** plugin appears in the list. Click **Install**.
 6. Open a folder for your business as your workspace (an empty folder is fine), and say **"build my Claude OS"**.
@@ -26,7 +24,7 @@ For people who use the CLI.
 
 1. Add the marketplace:
    ```
-   /plugin marketplace add YOUR-GITHUB-USERNAME/build-your-claude-os
+   /plugin marketplace add sineminflux/build-your-claude-os
    ```
 2. Install the plugin:
    ```
