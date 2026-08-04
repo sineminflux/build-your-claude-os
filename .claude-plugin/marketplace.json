@@ -1,0 +1,13 @@
+{
+  "name": "leverage-her-way",
+  "owner": {
+    "name": "Sinem Furtana"
+  },
+  "plugins": [
+    {
+      "name": "claude-os",
+      "source": "./plugins/claude-os",
+      "description": "Build your own Claude OS: a guided setup that stands up a workspace for your business, with a Front Desk router, memory, a brand one-pager, your writing voice, and anti-slop rules."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Connections
+
+Which tools are wired into this OS and what each is for. The session-audit skill reads the task settings here to decide whether it can create tasks.
+
+## Task capture
+
+- Task system: <!-- e.g. Notion, Todoist, Asana, Google Tasks, or "none" -->
+- task_capture: off <!-- on only after a live create-and-read-back test passes -->
+- verified: no <!-- set to "yes (YYYY-MM-DD)" once the test task was created and read back -->
+
+The session audit creates tasks only when `task_capture: on` and `verified: yes`. Any other state, and it runs capture-only: it saves learnings to files and does not touch a task system.
+
+## Connectors
+
+Each tool, its status, and what it unlocks. Status is `requested` (recommended, not yet connected), `connected`, or `off`.
+
+| Tool | Status | What it is for |
+|---|---|---|
+<!-- The builder fills these from the tool interview. Example: -->
+<!-- | Gmail | requested | Draft replies and triage the inbox, drafts only | -->
+
+Connections are set up in the app's own connector settings, not by Claude. Claude can recommend and, for the task system, verify. It cannot connect a tool for you.

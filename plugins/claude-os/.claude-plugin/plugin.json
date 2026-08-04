@@ -1,0 +1,9 @@
+{
+  "name": "claude-os",
+  "description": "Build your own Claude OS: a guided setup that stands up a workspace for your business, with a Front Desk router, memory, a brand one-pager, your writing voice, and anti-slop rules. Includes the builder, a voice-profile builder, a No AI Slop writing enforcer, and an end-of-session audit.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sinem Furtana"
+  },
+  "keywords": ["workspace", "business-os", "second-brain", "writing", "voice", "memory"]
+}

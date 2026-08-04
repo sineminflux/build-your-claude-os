@@ -1,0 +1,21 @@
+# {{BUSINESS_NAME}} Memory
+
+The accumulated facts about this business: who is involved, where things stand, what got decided and when. This file is the source of truth for anything that can change. The AI coworker writes here as facts appear; the owner does not type into it by hand.
+
+Keep it lean. A one-line pointer beats a paragraph. Behavior rules go in `CLAUDE.md`, not here.
+
+## The business at a glance
+
+<!-- One or two lines the builder fills from setup: what it is, its stage. -->
+
+## People and contacts
+
+<!-- Names, roles, and one line each. Added as they come up. -->
+
+## Key decisions (dated)
+
+<!-- Each decision on its own line with the date and a one-line reason. Newest at the top. -->
+
+## Current status
+
+<!-- What is live, in progress, or on hold right now. Updated as it changes. -->
