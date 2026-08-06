@@ -2,6 +2,9 @@
 
 The canonical reference for who this business is and how it shows up. Anything about positioning, audience, offers, or naming starts here. Deeper reference files sit alongside this one on the Shelf and are linked below.
 
+<!-- Facts drafted from the founder's own public pages during setup carry a source in parentheses. Anything left blank was not found on a page and not yet supplied; leave it blank rather than guess. -->
+
+
 ## What the business is
 
 <!-- One paragraph, plain language: what {{BUSINESS_NAME}} does, for whom, and what changes for the customer. Say the specific thing, not a category. -->
@@ -28,7 +31,7 @@ The canonical reference for who this business is and how it shows up. Anything a
 
 ## Deeper reference (on the Shelf)
 
-<!-- The builder links only the stubs the reader chose to create. -->
-- Ideal customer profile: `00_Shelf/ideal-customer-profile.md`
-- Brand story: `00_Shelf/brand-story.md`
-- Design guidelines: `00_Shelf/design-guidelines.md`
+These build later, each in its own session (see `00_Shelf/build-guide.md`). Until built, they are pending.
+- Ideal customer profile: `00_Shelf/ideal-customer-profile.md` (pending, run "build my ICP")
+- Design guidelines: `00_Shelf/design-guidelines.md` (pending, run "build my design guidelines")
+- Brand story: `00_Shelf/brand-story.md` (pending, run "build my brand story")

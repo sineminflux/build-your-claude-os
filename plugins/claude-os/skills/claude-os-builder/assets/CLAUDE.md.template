@@ -18,7 +18,7 @@ The line between them is where you find them, and has nothing to do with how lon
 
 This workspace can run in two tools and must behave the same in both:
 
-- **Cowork** (Claude desktop app): the workspace is a connected project folder.
+- **Cowork** (Claude desktop app): the workspace is a connected project folder. The app does not reliably read this file on its own at session start, so a short bootstrap in the project's Instructions box (custom-instructions field, in project settings) points Claude here. That bootstrap is what switches the OS on; the saved copy is `00_Shelf/cowork-bootstrap.md`. Keep it in place.
 - **Claude Code** (CLI): launch from this folder so this `CLAUDE.md` auto-loads. Department and desk `CLAUDE.md` files load when you work in them.
 
 Where an instruction names a tool-specific action (memory, skills, scheduling, connectors), do the equivalent in whichever tool you are in. Routing, guardrails, voice, and output rules are the same in both.
@@ -46,7 +46,11 @@ Where an instruction names a tool-specific action (memory, skills, scheduling, c
 
 This file, root `MEMORY.md`, and every skill description load every session, so keep them lean. Push detail into skill bodies, department files, desk files, or the Shelf, which load on demand. A one-line pointer beats a duplicated paragraph.
 
-Size budget, so the leanness rule has teeth: root `CLAUDE.md` under 12k, a department `CLAUDE.md` under 5k, a desk `CLAUDE.md` under 2k. Over budget means something belongs a level down.
+Size budgets, so the leanness rule has teeth. Standing files: root `CLAUDE.md` under 12k, a department `CLAUDE.md` under 5k, a desk `CLAUDE.md` under 2k. Reference files on the Shelf: `brand.md` under 4k, `voice-guidelines.md` under 6k. Any `MEMORY.md` under 6k. These are soft caps, but crossing one is a signal, not a nudge.
+
+Over budget means prune, not append. When a file crosses its cap, compact it before adding more: merge duplicate rules, cut facts that a newer one supersedes, and replace a repeated detail with a one-line pointer to where it lives. A fact that changed gets edited in place, never stacked as a new line under the stale one. A growing file stays useful only if something removes as well as adds; the session audit does that pruning, and "tidy my OS" runs it on demand.
+
+The bundled skills do not grow. Their rules are fixed and read-only. Your own additions live in the never-list inside `voice-guidelines.md`, which is held to the same budget, so nothing learns its way into an ever-larger file.
 
 ## Guardrails (never do these without asking first)
 
@@ -84,15 +88,15 @@ Pull a file down only when its trigger fires.
 | On the shelf | Pull it down when... |
 |---|---|
 | `brand.md` | Any positioning, brand, audience, offer, or monetization question. The canonical business one-pager, with links to deeper reference files. |
-| `voice-guidelines.md` | Producing ANY text written as {{BUSINESS_NAME}} (post, caption, email, newsletter, DM draft). |
+| `voice-guidelines.md` | Producing ANY text written as {{BUSINESS_NAME}} (post, caption, email, newsletter, DM draft). Holds your never-list of banned words and corrections, read with the `no-ai-slop` rules. |
 | `connections.md` | Setting up or checking connected tools, or when the session audit needs to know the task mode. |
-| `writing-rules.md` | Producing any writing. Your own banned words and corrections, read with the `no-ai-slop` rules. |
-<!-- The builder adds more Shelf rows (ICP, brand story, design) if the reader creates those stubs. -->
+| `build-guide.md` | Building a deeper document (voice, ICP, design guidelines, brand story). Open for the command and recipe. Each builds in its own fresh session. |
+<!-- The builder adds Shelf rows for ideal-customer-profile.md, brand-story.md, and design-guidelines.md once those are built via the build guide. -->
 
 ## Global output rules
 
 - **Before producing any file, artifact, or written output (including spreadsheets, decks, charts, code, and code comments), invoke the `no-ai-slop` skill, read `00_Shelf/voice-guidelines.md` this session, then run the skill's two-phase Final Pass before delivering.** Having the rules in context does not satisfy this. If you have not invoked the `no-ai-slop` skill for the current deliverable, stop and load it.
-- Save finished work to `_outputs/` unless told otherwise. Filename: `YYYY-MM-DD_description.md`.
+- Save finished work at the level you are working at: the desk's `_outputs/` if a desk is in play, otherwise the active department's `_outputs/`, otherwise root `_outputs/` for cross-cutting or unrouted work. Create that level's `_outputs/` on the first save into it; do not pre-make empty ones. Filename: `YYYY-MM-DD_description.md`. Say where you saved it in one line.
 - If a brief is unclear, ask one focused question before starting. Do not fill gaps with assumptions.
 - Match `voice-guidelines.md` for anything in {{BUSINESS_NAME}}'s voice; a department's Editorial Rules layer on top.
 - **No em dashes anywhere, including chat replies.** Use commas, periods, parentheses, or colons.
@@ -125,7 +129,13 @@ No shelf at desk level. Desks pull from their department's shelf and from `00_Sh
 
 ## Updating your skills
 
-The skills that run this OS (the builder, `no-ai-slop`, the voice builder, and the session audit) ship as a plugin. Update them by reinstalling the plugin from its source, not by editing files here. The `no-ai-slop` skill has its own `update-rules` command that learns your corrections over time.
+Two skills are saved in Customize so they run automatically every session: `no-ai-slop` (your writing rules) and the Session Audit. Both were built for you during setup and you Saved each with one click. To change one, edit its source in `_skills/<name>/`, rebuild the `.skill` following `_skills/skill-packaging.md`, and click Save Skill again (same name replaces the old one). Personal writing corrections do not need a rebuild; they go to the never-list in `voice-guidelines.md` automatically.
+
+The document builders (voice, ICP, design, brand story) come from the Claude OS plugin and also live as editable sources in `_skills/`, so to change one, edit its file in `_skills/<name>/` and it takes effect next time it runs. The main OS builder is not copied here; if you need it again, re-add the plugin by its GitHub link. If the plugin is removed, the two saved skills keep running and every document-builder source stays in `_skills/`, so those builds can still be re-run from there.
+
+## Building deeper documents
+
+When the reader says "build my voice", "build my ICP", "build my design guidelines", or "build my brand story", open and follow the matching builder file in `_skills/` (`voice-profile-builder`, `icp-builder`, `design-builder`, `brand-story-builder`), one document per fresh session. `00_Shelf/build-guide.md` lists the commands and what each produces. (The two everyday skills, No AI Slop and the Session Audit, were already built and saved during setup.)
 
 ---
 

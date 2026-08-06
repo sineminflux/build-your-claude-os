@@ -1,0 +1,9 @@
+# Cowork bootstrap (paste this into your project's Instructions box)
+
+This is the one paste that switches your OS on in the Claude desktop app. The app does not reliably read `CLAUDE.md` from the folder on its own at the start of a session, so these lines, kept in your project's Instructions field (project settings), point Claude to your OS every time. This file is your saved copy; if you ever clear the Instructions box, paste it back from here. In Claude Code you do not need this; the folder file loads on its own.
+
+Copy everything below the line into the Instructions box:
+
+---
+
+This project is my Claude OS for {{BUSINESS_NAME}}. At the start of every session, before you answer or act, open and read `CLAUDE.md` and `MEMORY.md` in this project folder and follow them. `CLAUDE.md` is the Front Desk: it holds my routing (the Floor Plan), my guardrails, my writing rules, and how memory works. If the task belongs to a department, read that department's `CLAUDE.md` and `MEMORY.md` too before doing the work. Do not skip this step.

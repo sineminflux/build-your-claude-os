@@ -1,0 +1,39 @@
+# Skill Packaging
+
+How to rebuild one of your skills into a `.skill` file so you can re-save it. Follow this whenever you change a skill and need to update it.
+
+## What a .skill file is
+
+A `.skill` file is a zip of a skill's folder, with one rule: `SKILL.md` must sit at the root of the zip, not inside a subfolder. Alongside it go any `references/` and `assets/` folders the skill uses.
+
+A valid package looks like this inside:
+
+```
+SKILL.md
+references/...
+assets/...
+```
+
+Not like this, which is nested one level too deep and will not load:
+
+```
+no-ai-slop/SKILL.md
+no-ai-slop/references/...
+```
+
+## The rules that matter
+
+- **Same name.** Keep the `name:` in the SKILL.md frontmatter exactly as it was. A saved skill is replaced only when the new one has the same name. A different name creates a second skill instead of updating the old one.
+- **No version in the filename.** Name the file `<skill-name>.skill` (for example `no-ai-slop.skill`), not `no-ai-slop-v2.skill`. Re-saving the same name is what "update" means.
+- **Zip from inside the folder.** Build the zip from within the skill's source folder, so `SKILL.md` lands at the root.
+
+## Steps (Claude does these)
+
+1. Edit the skill's source in `_skills/<skill-name>/`.
+2. From inside that folder, zip its contents into `<skill-name>.skill`, with `SKILL.md` at the root.
+3. Check the zip: `SKILL.md` is at the top level, and any `references/` and `assets/` came along.
+4. Hand the reader the `.skill` file. In Cowork, they Save it (Customize, then Skills), which shows as Update Skill when the name matches. In Claude Code, unzip it into the skills folder.
+
+## After updating
+
+The source in `_skills/` is the master copy. Keep it in sync with what was re-saved, so the next update starts from the current version, not an old one.

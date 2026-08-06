@@ -1,0 +1,22 @@
+# Build Guide — your deeper documents
+
+Your OS structure is built: the folders, the Front Desk (`CLAUDE.md`), your memory files, your brand one-pager (`00_Shelf/brand.md`), and your two everyday skills (No AI Slop and the Session Audit), which you saved during setup.
+
+Four deeper documents are built one at a time, each in its own fresh session, on purpose. Each reads real material (your writing samples, your brand docs), and one long session gets slow and costly re-reading all of it every turn. A fresh session per document keeps each build fast. Do the ones you want, in any order, and skip the rest.
+
+## How to run each
+
+Select this workspace folder, start a NEW session, and say the command. One document per session. Each command runs its builder from the plugin, and the same source also sits in `_skills/`, so there is nothing to install first.
+
+| Command | Builds | Lands at |
+|---|---|---|
+| build my voice | Your writing voice | `00_Shelf/voice-guidelines.md` |
+| build my ICP | Ideal customer profile | `00_Shelf/ideal-customer-profile.md` |
+| build my design guidelines | Design guidelines | `00_Shelf/design-guidelines.md` |
+| build my brand story | Brand story | `00_Shelf/brand-story.md` |
+
+Each builder asks for what you already have, reads it, asks only for the gaps, writes the file, and links it from `brand.md`.
+
+## Nothing to install or delete
+
+The two skills that run automatically every session, No AI Slop and the Session Audit, were built and saved during setup. These four document builders come from the plugin and also live in `_skills/`, so you do not save them and there is nothing to remove. If you ever remove the plugin, your two saved skills keep running and every source stays in `_skills/`.

@@ -14,9 +14,10 @@ MEMORY.md              accumulated facts about the business
 memory/                dated session logs
 00_Shelf/              reference files, pulled on a trigger
   brand.md             who they are, offers, who they serve, links, channels
-  voice-guidelines.md  how they write (produced by the voice builder)
-  writing-rules.md     personal banned words and corrections (read by no-ai-slop)
+  voice-guidelines.md  how they write, incl. a never-list of personal banned words (read by no-ai-slop)
   connections.md       which tools are connected and what for
+  cowork-bootstrap.md  the paste that switches the OS on in the desktop app
+_skills/               editable sources of your saved skills, plus skill-packaging.md (how to rebuild a .skill)
 _outputs/              finished deliverables
 ```
 
@@ -32,11 +33,11 @@ Pick the closest, then customize with the reader. Each becomes a Floor Plan row.
 
 **Creator / audience-led** (newsletter, social, courses)
 ```
-audience/     who they reach and where
-content/      ideas, drafts, published pieces (publishing operations live here as desks)
+content/      ideas, drafts, published pieces, and who you reach (per-channel work lives here as desks)
 offers/       products, courses, paid things
 operations/   admin, money, tools
 ```
+Who you reach and what is landing is context, not its own department. For a solo operator a separate `audience/` folder just leaves `content/` holding all the real work and `audience/` aging into dead weight. Keep that context inside the content work, or in `brand.md` under who you serve.
 
 **Coach / consultant** (one-to-one or small-group delivery)
 ```

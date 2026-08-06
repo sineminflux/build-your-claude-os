@@ -12,11 +12,13 @@ The session audit creates tasks only when `task_capture: on` and `verified: yes`
 
 ## Connectors
 
-Each tool, its status, and what it unlocks. Status is `requested` (recommended, not yet connected), `connected`, or `off`.
+Each tool from the stack interview, its status, and what it unlocks. Status is one of: `connected`, `requested` (a connector exists and is worth wiring, not yet connected), `gap` (a tool you use with no connector, so the OS drafts and you paste), or `off` (deliberately kept out).
 
 | Tool | Status | What it is for |
 |---|---|---|
-<!-- The builder fills these from the tool interview. Example: -->
-<!-- | Gmail | requested | Draft replies and triage the inbox, drafts only | -->
+<!-- The builder fills these from the stack interview. Examples: -->
+<!-- | Gmail | connected | Draft replies and triage the inbox, drafts only | -->
+<!-- | Todoist | requested | Create tasks from the session audit | -->
+<!-- | ConvertKit | gap | No connector yet; the OS drafts broadcasts and you paste | -->
 
 Connections are set up in the app's own connector settings, not by Claude. Claude can recommend and, for the task system, verify. It cannot connect a tool for you.
