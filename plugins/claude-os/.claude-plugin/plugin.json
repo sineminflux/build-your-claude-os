@@ -1,7 +1,7 @@
 {
   "name": "claude-os",
-  "description": "Build your own Claude OS: five guided builders that stand up a workspace for your business and build its skills for you. The main builder creates your folder, Front Desk router, memory, brand one-pager, and your two everyday skills (No AI Slop writing rules and Session Audit) to Save with one click; follow-up builders create your voice, ICP, design guidelines, and brand story, one per session.",
-  "version": "1.1.0",
+  "description": "Build your own Claude OS: guided builders that stand up a workspace for your business. No AI Slop writing rules and a Session Audit run automatically; the main builder creates your folder, Front Desk router, memory, and brand one-pager and hands you savable copies of those two skills to own; follow-up builders create your voice, ICP, design guidelines, and brand story, one per session; and a Migrator brings your old folder, workspace, or Claude Project into the OS.",
+  "version": "1.2.0",
   "author": {
     "name": "Sinem Furtana"
   },

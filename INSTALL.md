@@ -2,8 +2,6 @@
 
 You install this once. After that, "build my Claude OS" runs the setup.
 
-> Before you share this: replace `YOUR-GITHUB-USERNAME` below with your real GitHub username (or wherever you host this repo). The install works by pointing Claude at that repository link.
-
 ## In Cowork (Claude desktop app)
 
 Most readers use this path.
@@ -13,7 +11,7 @@ Most readers use this path.
 3. Choose **Personal**, then **Add marketplace from GitHub**.
 4. Paste the repository link:
    ```
-   https://github.com/YOUR-GITHUB-USERNAME/build-your-claude-os
+   https://github.com/sineminflux/build-your-claude-os
    ```
 5. The **Claude OS** plugin appears in the list. Click **Install**.
 6. Open a folder for your business as your workspace (an empty folder is fine), and say **"build my Claude OS"**.
@@ -26,7 +24,7 @@ For people who use the CLI.
 
 1. Add the marketplace:
    ```
-   /plugin marketplace add YOUR-GITHUB-USERNAME/build-your-claude-os
+   /plugin marketplace add sineminflux/build-your-claude-os
    ```
 2. Install the plugin:
    ```
@@ -40,11 +38,11 @@ Plugin tooling changes over time, and direct file uploads of plugins have been u
 
 ## What gets installed, and how you end up owning it
 
-Five builders: the Claude OS Builder, the Voice Profile Builder, and the ICP, Design Guidelines, and Brand Story builders. Installing the plugin makes all five available. You do not save any of them yourself.
+Six builders: the Claude OS Builder, the Voice Profile Builder, the ICP, Design Guidelines, and Brand Story builders, and the Migrator. Installing the plugin makes all six available. You do not save any of them yourself.
 
 You run them by command:
 
-1. "build my Claude OS" builds your folder structure and, in the same session, your two everyday skills, No AI Slop and the Session Audit. Each is handed to you as a `.skill` file and you click Save once. Those are the only two skills you save, and you never hunt for or upload them.
-2. Then, in fresh sessions, "build my voice", "build my ICP", "build my design guidelines", and "build my brand story" build the deeper reference files, in any order.
+1. "build my Claude OS" builds your folder structure. No AI Slop and the Session Audit are already running from the plugin, and in the same session the builder hands you your own savable copies of each as a `.skill` file, so you own editable versions. You never hunt for or upload them.
+2. Then, in fresh sessions, "build my voice", "build my ICP", "build my design guidelines", and "build my brand story" build the deeper reference files, in any order. To bring in old material, say "migrate my old folder" or "bring in my old Project" and the Migrator sorts it into your OS.
 
 Every builder drops its editable source into a top-level `_skills/` folder in your workspace, so the skills are yours. Change any by asking Claude to edit its source and rebuild it, then click Save again for the two saved ones. You can remove the plugin afterward and keep everything: the two saved skills keep running and every source stays in `_skills/`. Keep the plugin installed (or re-add it by its GitHub link) if you want to re-run a document builder later.

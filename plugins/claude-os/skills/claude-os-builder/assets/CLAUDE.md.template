@@ -18,7 +18,7 @@ The line between them is where you find them, and has nothing to do with how lon
 
 This workspace can run in two tools and must behave the same in both:
 
-- **Cowork** (Claude desktop app): the workspace is a connected project folder. The app does not reliably read this file on its own at session start, so a short bootstrap in the project's Instructions box (custom-instructions field, in project settings) points Claude here. That bootstrap is what switches the OS on; the saved copy is `00_Shelf/cowork-bootstrap.md`. Keep it in place.
+- **Cowork** (Claude desktop app): the workspace is a connected project folder, and the app loads this file on its own once the folder is connected, so the OS switches on by itself. If a session ever opens and Claude clearly does not know the business, there is a fallback: paste the few lines from `00_Shelf/cowork-bootstrap.md` into the project's Instructions box (custom-instructions field, in project settings) to force the load. Keep that file on the Shelf.
 - **Claude Code** (CLI): launch from this folder so this `CLAUDE.md` auto-loads. Department and desk `CLAUDE.md` files load when you work in them.
 
 Where an instruction names a tool-specific action (memory, skills, scheduling, connectors), do the equivalent in whichever tool you are in. Routing, guardrails, voice, and output rules are the same in both.
@@ -129,13 +129,13 @@ No shelf at desk level. Desks pull from their department's shelf and from `00_Sh
 
 ## Updating your skills
 
-Two skills are saved in Customize so they run automatically every session: `no-ai-slop` (your writing rules) and the Session Audit. Both were built for you during setup and you Saved each with one click. To change one, edit its source in `_skills/<name>/`, rebuild the `.skill` following `_skills/skill-packaging.md`, and click Save Skill again (same name replaces the old one). Personal writing corrections do not need a rebuild; they go to the never-list in `voice-guidelines.md` automatically.
+Two skills run automatically every session: `no-ai-slop` (your writing rules) and the Session Audit. They run from the Claude OS plugin where you installed it, and you were also handed your own savable copies during setup, so you own editable versions that keep working in any case. To change one, edit its source in `_skills/<name>/`, rebuild the `.skill` following `_skills/skill-packaging.md`, and click Save Skill (same name replaces the old one). Personal writing corrections do not need a rebuild; they go to the never-list in `voice-guidelines.md` automatically.
 
 The document builders (voice, ICP, design, brand story) come from the Claude OS plugin and also live as editable sources in `_skills/`, so to change one, edit its file in `_skills/<name>/` and it takes effect next time it runs. The main OS builder is not copied here; if you need it again, re-add the plugin by its GitHub link. If the plugin is removed, the two saved skills keep running and every document-builder source stays in `_skills/`, so those builds can still be re-run from there.
 
-## Building deeper documents
+## Building deeper documents and bringing in old material
 
-When the reader says "build my voice", "build my ICP", "build my design guidelines", or "build my brand story", open and follow the matching builder file in `_skills/` (`voice-profile-builder`, `icp-builder`, `design-builder`, `brand-story-builder`), one document per fresh session. `00_Shelf/build-guide.md` lists the commands and what each produces. (The two everyday skills, No AI Slop and the Session Audit, were already built and saved during setup.)
+When the reader says "build my voice", "build my ICP", "build my design guidelines", or "build my brand story", open and follow the matching builder file in `_skills/` (`voice-profile-builder`, `icp-builder`, `design-builder`, `brand-story-builder`), one document per fresh session. When they say "migrate my old folder", "import my workspace", or "bring in my old Project", open and follow `_skills/migrator/`, which sorts old material into this OS (copying not moving, proposing before it writes, existing OS wins conflicts). `00_Shelf/build-guide.md` lists the commands and what each produces. (The two everyday skills, No AI Slop and the Session Audit, were already built and saved during setup.)
 
 ---
 

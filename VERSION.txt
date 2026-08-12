@@ -1,0 +1,12 @@
+Build Your Own Claude OS
+Build date: 2026-08-11
+
+What this build includes (open this file in any zip to confirm you have the latest):
+- Plugin is the primary deliverable. Starter folder and skills zip are backups.
+- No AI Slop and Session Audit run automatically from the plugin (on from install, a skipped save step is harmless). The builder also hands you savable copies for ownership (Step 8).
+- No content-creation quick win: the builder never offers to draft posts/captions during setup; any first win is a non-writing demo.
+- Step 3 asks for your existing documents and links first, reads them, then asks only for the gaps.
+- Six builders: Claude OS Builder, Voice, ICP, Design Guidelines, Brand Story, and the Migrator.
+- Migrator brings in an old folder or workspace, or a Claude Project (via an export prompt and manifest).
+- Starter folder triggers the build from a real CLAUDE.md. No Instructions-box bootstrap step.
+- No AI Slop rebuilt (seven laws, eval.md Final Pass) and generalized for any reader.

@@ -7,7 +7,7 @@
     {
       "name": "claude-os",
       "source": "./plugins/claude-os",
-      "description": "Build your own Claude OS: five guided builders that stand up a workspace for your business and build its skills for you, from the Front Desk router and memory to your writing rules, voice, and brand."
+      "description": "Build your own Claude OS: guided builders that stand up a workspace for your business and build its skills for you, from the Front Desk router and memory to your writing rules, voice, and brand, plus a Migrator that brings in your old folder, workspace, or Claude Project."
     }
   ]
 }

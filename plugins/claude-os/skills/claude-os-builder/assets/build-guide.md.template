@@ -17,6 +17,10 @@ Select this workspace folder, start a NEW session, and say the command. One docu
 
 Each builder asks for what you already have, reads it, asks only for the gaps, writes the file, and links it from `brand.md`.
 
+## Bringing in your old stuff
+
+Have material sitting in an old folder, an old workspace, or a Claude Project? Start a new session and say **"migrate my old folder"** or **"bring in my old Project"**. The Migrator asks where you are moving from, then sorts every item into your `CLAUDE.md`, `MEMORY.md`, and Shelf. It copies rather than moves, proposes before it writes, keeps your existing OS when anything conflicts, and leaves stale content behind so you do not import the clutter. For a Claude Project it hands you a prompt to run inside that Project, which produces a manifest it then files for you.
+
 ## Nothing to install or delete
 
-The two skills that run automatically every session, No AI Slop and the Session Audit, were built and saved during setup. These four document builders come from the plugin and also live in `_skills/`, so you do not save them and there is nothing to remove. If you ever remove the plugin, your two saved skills keep running and every source stays in `_skills/`.
+The two skills that run automatically every session, No AI Slop and the Session Audit, were built and saved during setup. The document builders and the Migrator come from the plugin and also live in `_skills/`, so you do not save them and there is nothing to remove. If you ever remove the plugin, your two saved skills keep running and every source stays in `_skills/`.
